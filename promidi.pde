@@ -19,9 +19,40 @@
  Boston, MA  02111-1307  USA
  */
 
-package promidi;
+//package promidi;
 
+import java.io.InputStream;
+import java.io.IOException;
+import java.lang.reflect.Method;
+/*
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedMap;
+import java.util.TreeMap;
+import java.util.TreeSet;
+import java.util.Vector;
+import javax.sound.midi.InvalidMidiDataException;
+import javax.sound.midi.MidiMessage;
+import javax.sound.midi.MidiSystem;
+import javax.sound.midi.MidiUnavailableException;
+import javax.sound.midi.Receiver;
 import javax.sound.midi.ShortMessage;
+import javax.sound.midi.Transmitter;
+*/
+import java.util.*;
+import javax.sound.midi.*;
+
+import promidi.Controller;
+import promidi.Note;
+
+import processing.core.PApplet;
 
 /**
  * Controller represents a midi controller. It has a number and a value. You can
@@ -128,17 +159,7 @@ Boston, MA  02111-1307  USA
 /**
  * Must be in the javax.sound.midi package because the constructor is package-private
  */
-package promidi;
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
-import java.util.SortedMap;
-import java.util.TreeMap;
-import java.util.Vector;
-
-import javax.sound.midi.ShortMessage;
+//package promidi;
 
 /**
  * A track handles all midiEvents of a song for a certain midiout. You can directly 
@@ -661,7 +682,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
+//package promidi;
 
 /**
  * @invisible
@@ -695,9 +716,7 @@ public class InvalidMidiDataException extends RuntimeException{
  Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  Boston, MA  02111-1307  USA
  */
-package promidi;
-
-import java.lang.reflect.Method;
+//package promidi;
 
 /**
  * A Plug is the invocation of a method to handle incoming MidiEvents.
@@ -844,7 +863,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
+//package promidi;
 
 abstract class MidiDevice{
 
@@ -917,9 +936,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
-
-import javax.sound.midi.ShortMessage;
+//package promidi;
 
 /**
  * ProgramChange represents a midi program change. It has a midi port, a midi channel, 
@@ -972,10 +989,7 @@ public class ProgramChange extends MidiEvent{
  Boston, MA  02111-1307  USA
  */
 
-package promidi;
-
-import javax.sound.midi.InvalidMidiDataException;
-import javax.sound.midi.MidiMessage;
+//package promidi;
 
 /**
  * Event is the base class for all MidiEvents, like 
@@ -1374,7 +1388,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
+//package promidi;
 
 /**
  * This class olds the constants for the quantization of the
@@ -1416,10 +1430,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
-
-import promidi.Controller;
-import promidi.Note;
+//package promidi;
 
 abstract class MidiEventProcessor{
 
@@ -1486,12 +1497,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.List;
-import java.util.ArrayList;
+//package promidi;
 
 /**
  * A sequencer describes a device that records and plays back a sequence
@@ -1985,15 +1991,7 @@ public class Sequencer implements Runnable{
  Boston, MA  02111-1307  USA
  */
 
-package promidi;
-
-import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Vector;
-
-import javax.sound.midi.MidiSystem;
-import javax.sound.midi.MidiUnavailableException;
+//package promidi;
 
 /**
  * MidiIO is the base class for managing the available midi ports. 
@@ -2477,11 +2475,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
-
-import java.util.SortedMap;
-import java.util.TreeMap;
-import java.util.Vector;
+//package promidi;
 
 /**
  * A song is a data structure containing musical information 
@@ -2632,10 +2626,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
-
-import java.util.ArrayList;
-import java.util.List;
+//package promidi;
 
 /**
  * Handles the incoming midi data defined by an an midi device and
@@ -2881,7 +2872,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
+//package promidi;
 
 /**
  * Use this interface to implement any component that depend on the song position.
@@ -2916,13 +2907,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
-
-import javax.sound.midi.MidiMessage;
-import javax.sound.midi.MidiUnavailableException;
-import javax.sound.midi.Receiver;
-import javax.sound.midi.ShortMessage;
-import javax.sound.midi.Transmitter;
+//package promidi;
 
 class MidiInDevice extends MidiDevice implements Receiver{
 
@@ -3039,11 +3024,7 @@ Public License along with this library; if not, write to the
 Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
-package promidi;
-
-import java.util.HashMap;
-import java.util.Vector;
-
+//package promidi;
 
 /**
  * This class is for the mapping of the midievents of a sequence to the different ticks.
@@ -3136,10 +3117,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
-
-import java.util.Comparator;
-import java.util.TreeSet;
+//package promidi;
 
 /**
  * The MidiOut class is for sending midi events. An MidiOut is
@@ -3432,7 +3410,7 @@ Boston, MA  02111-1307  USA
 /**
  * Must be in the javax.sound.midi package because the constructor is package-private
  */
-package promidi;
+//package promidi;
 
 /**
  * A track handles all midiEvents of a song for a certain midiout. You can directly 
@@ -3560,10 +3538,7 @@ public class Track extends Pattern{
  Boston, MA  02111-1307  USA
  */
 
-package promidi;
-
-import javax.sound.midi.MidiUnavailableException;
-import javax.sound.midi.Receiver;
+//package promidi;
 
 /**
  * This class has no accessable contructor use MidiIO.openOutput() to get a MidiOut. 
@@ -3709,7 +3684,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
+//package promidi;
 
 /**
  * This exception is thrown when you want to access an unavailable Midi port.
@@ -3743,10 +3718,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
-
-import javax.sound.midi.InvalidMidiDataException;
-import javax.sound.midi.ShortMessage;
+//package promidi;
 
 /**
  * Note represents a midi note. It has a midi port, a midi channel, 
@@ -3900,12 +3872,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
-
-import java.util.Vector;
-
-import javax.sound.midi.MidiMessage;
-import javax.sound.midi.ShortMessage;
+//package promidi;
 
 /**
  * A cache object to keep hold of notes that are currently on.
@@ -3960,7 +3927,7 @@ Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 Boston, MA  02111-1307  USA
 */
 
-package promidi;
+//package promidi;
 /**
  * Note this class is only needed for building the documentation of 
  * the methods that can be implemented in the processing app.
